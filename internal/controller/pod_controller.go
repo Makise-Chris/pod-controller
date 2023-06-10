@@ -94,7 +94,7 @@ func (r *PodReconciler) sendEmailNotification(pod *corev1.Pod, action string) er
 
 func sendEmail(subject, body string) error {
 	from := "namnt194337@gmail.com"
-	password := "Nam12345"
+	password := "wladvsojvxehezmy"
 	to := "trieu81200111@gmail.com"
 
 	// Set up authentication information.
