@@ -83,7 +83,7 @@ func (r *PodReconciler) SetupWithManager(mgr ctrl.Manager) error {
 func (r *PodReconciler) sendEmailNotification(pod *corev1.Pod, action string) error {
 	// Send email notification
 	subject := fmt.Sprintf("Pod %s: %s", action, pod.Name)
-	body := fmt.Sprintf("Pod %s %s in namespace %s", action, pod.Name, pod.Namespace)
+	body := fmt.Sprintf("Pod %s %s in namespace %s", pod.Name, action, pod.Namespace)
 	err := sendEmail(subject, body)
 	if err != nil {
 		return err
